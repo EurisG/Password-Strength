@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Password Strength</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+
+        <h1 class="top">Password-Strength Checker</h1>
+            <!-- complete box div  -->
+            <div class="boxContainer">
+                
+                <!-- welcome header  -->
+                <div class="header">
+                    <h1>Welcome</h1>
+                </div>
+
+                <!-- email and password container -->
+            <div class="emailAndPasswordContainer">
+                    <div class="emailAndPassword">
+                
+                        <!-- email  -->
+                        <form action="email">
+                            <h3>Email</h3>
+                              <input type="email" placeholder="Enter your email address">
+                            </form>
+
+                            <!-- password  -->
+                            <form action="password">
+                              <h3>Password</h3>
+                            <input type="password" placeholder="Enter your password">
+                            
+                            <!-- show password eye  -->
+                            <span class="show-pass" onclick="toggle()">
+                                <i class="far fa-eye" onclick="myFunction(this)"></i>
+                            </span>
+                        </form>
+                             
+                        <!-- password strength  -->
+                             <div id="password-strength" 
+                             class="progress-bar" 
+                            role="progressbar" 
+                             aria-valuenow="40" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100" 
+                             style="width:0%">
+                        </div>
+                    </div>
+
+            </div>
+
+          
+               <!-- password keys  -->
+            <div class="listContainer">
+
+                <ul class="keys">
+                    <li>Lowercase & Uppercase</li>
+                    <li>Number (0-9)</li>
+                    <li>Special Character (! @ # $ % ^ & *)</li>
+                    <li>Atleast 8 Character</li>
+                </ul>
+
+            </div>
+
+            <!-- create account button  -->
+
+            <div class="createAccountContainer">
+                <button>Create Account</button>
+                <p>Already have an account? Sign-in <a href="">here</a> </p>
+            </div>
+
+         </div>
+        
+        
+        <script src="./javascript/index.js" async defer></script>
+    </body>
+</html>
