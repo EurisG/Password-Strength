@@ -6,14 +6,14 @@ const special = document.querySelector('.one-special-char')
 const eight = document.querySelector('.eight-character')
 const lowUpperCase = document.querySelector('.low-upper-case')
 
-function password(){
+// function password(){
 
-}
-password.addEventListener ("keyup", function() {
-    let pass = documnet.querySelector("password").value 
-    checkStrength(pass);
-    // console.log('HELLO')
-});
+// }
+// password.addEventListener ("keyup", function() {
+//     let pass = documnet.querySelector("password").value 
+//     checkStrength(pass);
+//     // console.log('HELLO')
+// });
 
 function toggle() {
     if(state){
@@ -30,11 +30,11 @@ function myFunction(show){
 }
 
 function checkStrength(pw) {
-    let strenght = 0;
+    let strength = 0;
 
     // contains uppercase and lowercase 
     if (password.match(([a-z] * [A-Z]) ([A-Z] * [a-z]))) {
-        strenght += 1;
+        strength += 1;
         lowUpperCase.classList.remove('fa-circle');
         lowUpperCase.classList.add('fa-check');
     } else {
@@ -44,8 +44,8 @@ function checkStrength(pw) {
 
     // has number 
     if (password.match([0 - 9])){
-        strenght += 1 
-        Number.classList.remove('fa-circle');
+        strength += 1 
+        number.classList.remove('fa-circle');
         number.classList.add('fa-check');
     } else {
         number.classList.add('fa-circle');
@@ -54,7 +54,7 @@ function checkStrength(pw) {
 
     // has special character 
     if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
-        strenght += 1;
+        strength += 1;
         special.classList.remove('fa-circle');
         special.classList.add('fa-check');
 
@@ -89,5 +89,13 @@ function checkStrength(pw) {
         pwStrength.classList.remove('progress-bar-danger');
         pwStrength.classList.add('progress-bar-success');
         pwStrength.style = 'width: 100%';
+    }
+}
+
+function createAcc() {
+    if(state === true) {
+     alert('Thank you for creating an account!')
+    } else{
+        alert('Please make sure email and password are correct!')
     }
 }
