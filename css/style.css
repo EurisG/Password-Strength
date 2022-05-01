@@ -55,6 +55,10 @@ input[type=text]:focus{
     border: 1px solid rgba(246, 8, 110,0.8);
 }
 
+.progress {
+    height: 3px !important;
+}
+
 .form-group {
     margin-bottom: 10px;
 }
@@ -87,8 +91,12 @@ input[type=text]:focus{
 }
 
 button{
-    margin: 10px;
-    padding: 15px;
+    /* margin: 10px;
+    padding: 15px; */
+    font-size: 18px;
+    color: rgb(36, 35, 35);
+    margin: 10px auto 10px;
+    padding: 15px 10px; 
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     border-radius: 8px;

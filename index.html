@@ -8,6 +8,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/style.css">
+        <!-- <script src="https://kit.fontawesome.com/1c2c2462bf.js" crossorigin="anonymous"></script> -->
     </head>
     <body>
 
@@ -19,7 +20,7 @@
                 <div class="header">
                     <h1>Welcome</h1>
                 </div>
-
+          <fieldset>
                 <!-- email and password container -->
             <div class="emailAndPasswordContainer">
                     <div class="emailAndPassword">
@@ -33,15 +34,18 @@
                             <!-- password  -->
                             <form action="password">
                               <h3>Password</h3>
-                            <input type="password" placeholder="Enter your password" class="pwBox">
+                            <input type="password" placeholder="Enter your password" class="pwBox" name="Password">
                             
                             <!-- show password eye  -->
                             <span class="show-pass" onclick="toggle()">
-                                <i class="far fa-eye" onclick="myFunction(this)"></i>
+                                <i class="fa-eye" onclick="myFunction(this)"></i>
                             </span>
                         </form>
                              
                         <!-- password strength  -->
+                        <div id="popover-password">
+                            <p><span id="result"></span></p>
+                            <div class="progress">
                              <div id="password-strength" 
                              class="progress-bar" 
                             role="progressbar" 
@@ -49,33 +53,46 @@
                              aria-valuemin="0" 
                              aria-valuemax="100" 
                              style="width:0%">
-                        </div>
-                    </div>
+                                </div>
+                            </div>
 
-            </div>
+            
 
           
                <!-- password keys  -->
             <div class="listContainer">
 
-                <ul class="keys">
-                    <span class="low-upper-case">
-                    <li class="">Lowercase & Uppercase</li>
-                    </span>
+                <ul class="pwKeys">
+                    <li class="">
+                        <span class="low-upper-case" >
+                            <i  class="fas fa-circle" aria-hidden="true"></i>
+                                 &nbsp;Lowercase &amp; Uppercase
+                        </span>
+                     </li>
 
-                    <span class="one-number">
-                    <li>Number (0-9)</li>
-                    </span>
+                     <li class="">
+                         <span class="one-number">
+                            <i  class="fas fa-circle" aria-hidden="true"></i>
+                            &nbsp;Number (0-9)
+                        </span>
+                    </li>
 
-                    <span class="one-special-char">
-                    <li>Special Character (! @ # $ % ^ & *)</li>
-                    </span>
+                    <li class="">
+                         <span class="one-special-char">
+                            <i  class="fas fa-circle" aria-hidden="true"></i>
+                            &nbsp;Special Character (! @ # $ % ^ & *)
+                        </span>
+                    </li>
 
-                    <span class="eight-character">
-                    <li>Atleast 8 Character</li>
-                    </span>
+                    <li class="">
+                         <span class="eight-character">
+                            <i class="fas fa-circle" aria-hidden="true"></i>
+                            &nbsp;Atleast 8 Character
+                         </span>
+                    </li>
                 </ul>
-
+                </div>
+                </div>
             </div>
 
             <!-- create account button  -->
@@ -85,6 +102,9 @@
                 <p>Already have an account? Sign-in <a href="">here</a> </p>
             </div>
 
+         </div>
+
+         </fieldset>
          </div>
         
         
