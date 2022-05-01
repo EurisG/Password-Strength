@@ -27,13 +27,13 @@
                         <!-- email  -->
                         <form action="email">
                             <h3>Email</h3>
-                              <input type="email" placeholder="Enter your email address">
+                              <input type="email" placeholder="Enter your email address" class="emailBox">
                             </form>
 
                             <!-- password  -->
                             <form action="password">
                               <h3>Password</h3>
-                            <input type="password" placeholder="Enter your password">
+                            <input type="password" placeholder="Enter your password" class="pwBox">
                             
                             <!-- show password eye  -->
                             <span class="show-pass" onclick="toggle()">
@@ -59,10 +59,21 @@
             <div class="listContainer">
 
                 <ul class="keys">
-                    <li>Lowercase & Uppercase</li>
+                    <span class="low-upper-case">
+                    <li class="">Lowercase & Uppercase</li>
+                    </span>
+
+                    <span class="one-number">
                     <li>Number (0-9)</li>
+                    </span>
+
+                    <span class="one-special-char">
                     <li>Special Character (! @ # $ % ^ & *)</li>
+                    </span>
+
+                    <span class="eight-character">
                     <li>Atleast 8 Character</li>
+                    </span>
                 </ul>
 
             </div>
